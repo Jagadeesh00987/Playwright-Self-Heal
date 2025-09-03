@@ -1,0 +1,4 @@
+[INFO] 2025-09-01T11:47:09.523Z → [PASS] Filled: //input[@placeholder='Username']
+[WARN] 2025-09-01T11:47:12.548Z → [WARN] Fill failed for: input[class="Password12"]
+[ERROR] 2025-09-01T11:47:15.202Z → OpenAI healing failed: 429 You exceeded your current quota, please check your plan and billing details. For more information on this error, read the docs: https://platform.openai.com/docs/guides/error-codes/api-errors.
+[INFO] 2025-09-01T11:47:15.204Z → [INFO] Healing suggested: input[class="Password"]

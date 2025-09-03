@@ -1,0 +1,37 @@
+{
+  "name": "playwright-autoheal-js",
+  "version": "1.0.0",
+  "description": "Playwright Test Framework with Self-Healing Locators (AI + Fallback)",
+  "scripts": {
+    "test": "npx playwright test",
+    "report": "npx playwright show-report"
+  },
+  "dependencies": {
+    "@aws-sdk/client-bedrock-runtime": "^3.856.0",
+    "@axe-core/playwright": "^4.8.1",
+    "@langchain/aws": "^0.1.14",
+    "@langchain/community": "^0.3.53",
+    "@playwright/test": "^1.53.1",
+    "bottleneck": "^2.19.5",
+    "cheerio": "^1.0.0-rc.12",
+    "cross-env": "^7.0.3",
+    "csv-parse": "^5.5.5",
+    "csv-writer": "^1.6.0",
+    "dotenv": "^17.2.1",
+    "exceljs": "^4.4.0",
+    "fs-extra": "^11.3.0",
+    "jsdom": "^24.0.0",
+    "jsonpath": "^1.1.1",
+    "minimist": "^1.2.8",
+    "nyc": "^15.1.0",
+    "openai": "^4.0.0",
+    "p-limit": "^6.2.0",
+    "pixelmatch": "^7.1.0",
+    "playwright-lighthouse": "^4.0.0",
+    "pngjs": "^7.0.0",
+    "uuid": "^9.0.1"
+  },
+  "devDependencies": {
+    "@types/node": "^20.4.8"
+  }
+}

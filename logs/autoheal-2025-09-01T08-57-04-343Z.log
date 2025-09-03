@@ -1,0 +1,4 @@
+[WARN] 2025-09-01T08:57:14.299Z → [WARN] Locator failed: button:has-text("Login123")
+[ERROR] 2025-09-01T08:57:16.752Z → OpenAI healing failed: 429 You exceeded your current quota, please check your plan and billing details. For more information on this error, read the docs: https://platform.openai.com/docs/guides/error-codes/api-errors.
+[INFO] 2025-09-01T08:57:16.753Z → [INFO] Healing suggested: button:has-text("Login")
+[INFO] 2025-09-01T08:57:16.818Z → [PASS] Retried with healed locator

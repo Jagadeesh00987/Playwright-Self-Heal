@@ -1,0 +1,9 @@
+[INFO] 2025-09-02T04:58:10.630Z → [PASS] Filled: //input[@placeholder='Username']
+[WARN] 2025-09-02T04:58:13.658Z → [WARN] Fill failed for: input[placeholder="Password123"]
+[ERROR] 2025-09-02T04:58:16.816Z → OpenAI healing failed: 429 You exceeded your current quota, please check your plan and billing details. For more information on this error, read the docs: https://platform.openai.com/docs/guides/error-codes/api-errors.
+[INFO] 2025-09-02T04:58:16.818Z → [INFO] Healing suggested: input[placeholder="Password"]
+[INFO] 2025-09-02T04:58:16.860Z → [PASS] Retried fill with healed locator
+[WARN] 2025-09-02T04:58:19.880Z → [WARN] Locator failed: button:has-text("Login123")
+[ERROR] 2025-09-02T04:58:22.147Z → OpenAI healing failed: 429 You exceeded your current quota, please check your plan and billing details. For more information on this error, read the docs: https://platform.openai.com/docs/guides/error-codes/api-errors.
+[INFO] 2025-09-02T04:58:22.149Z → [INFO] Healing suggested: button:has-text("Login")
+[INFO] 2025-09-02T04:58:23.852Z → [PASS] Retried with healed locator
