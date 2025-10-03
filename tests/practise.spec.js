@@ -90,7 +90,7 @@ test("Radio Button Test", async ({ page }) => {
   await expect(page.locator("//input[@value='igottwo']")).toBeChecked();
 });
 
-test.only('Buttons',async({page})=>{
+test('Buttons',async({page})=>{
  await page.goto(
     "https://www.tutorialspoint.com/selenium/practice/slider.php"
   );
@@ -105,4 +105,21 @@ await expect(text1.includes("You have Double clicked ")).toBeTruthy();
 await page.locator("//button[normalize-space()='Right Click Me']").click({button:'right'});
 // const text2=await page.locator("#rightclickc").textContent();
 // await expect(text2.includes("You have done a right click")).toBeTruthy();
+});
+
+test.only('Links',async({page})=>{
+await page.goto(
+    "https://www.tutorialspoint.com/selenium/practice/slider.php"
+  );
+ await page.locator("//button[normalize-space()='Elements']").click();
+await page.locator("//a[normalize-space()='Links']").click();
+const [newPage]=await Promise.all([
+page.waitForEvent('popup'),
+page.locator("//a[normalize-space()='Home']").click()
+
+]);
+await newPage.waitForLoadState();
+await expect(newPage).toHaveURL("https://www.tutorialspoint.com/index.htm");
+await page.goBack();
+await expect(page).toHaveURL("https://www.tutorialspoint.com/selenium/practice/slider.php");
 });
