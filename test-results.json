@@ -84,7 +84,7 @@
       "line": 0,
       "specs": [
         {
-          "title": "Validate all images on the page",
+          "title": "Broken Links",
           "ok": true,
           "tags": [],
           "tests": [
@@ -99,19 +99,124 @@
                   "workerIndex": 0,
                   "parallelIndex": 0,
                   "status": "passed",
-                  "duration": 8409,
+                  "duration": 17452,
                   "errors": [],
                   "stdout": [
                     {
-                      "text": "Found 1 images\n"
+                      "text": "Broken 36 Links \n"
                     },
                     {
-                      "text": "Image with src [object Promise] is broken\n"
+                      "text": "Valid Link https://www.tutorialspoint.com| Status 200\n"
+                    },
+                    {
+                      "text": "Valid Link https://www.tutorialspoint.com/selenium/index.htm| Status 200\n"
+                    },
+                    {
+                      "text": "Valid Link https://www.tutorialspoint.com/selenium/practice/text-box.php| Status 200\n"
+                    },
+                    {
+                      "text": "Valid Link https://www.tutorialspoint.com/selenium/practice/check-box.php| Status 200\n"
+                    },
+                    {
+                      "text": "Valid Link https://www.tutorialspoint.com/selenium/practice/radio-button.php| Status 200\n"
+                    },
+                    {
+                      "text": "Valid Link https://www.tutorialspoint.com/selenium/practice/webtables.php| Status 200\n"
+                    },
+                    {
+                      "text": "Valid Link https://www.tutorialspoint.com/selenium/practice/buttons.php| Status 200\n"
+                    },
+                    {
+                      "text": "Valid Link https://www.tutorialspoint.com/selenium/practice/links.php| Status 200\n"
+                    },
+                    {
+                      "text": "Valid Link https://www.tutorialspoint.com/selenium/practice/broken-links.php| Status 200\n"
+                    },
+                    {
+                      "text": "Valid Link https://www.tutorialspoint.com/selenium/practice/upload-download.php| Status 200\n"
+                    },
+                    {
+                      "text": "Valid Link https://www.tutorialspoint.com/selenium/practice/dynamic-prop.php| Status 200\n"
+                    },
+                    {
+                      "text": "Valid Link https://www.tutorialspoint.com/selenium/practice/selenium_automation_practice.php| Status 200\n"
+                    },
+                    {
+                      "text": "Valid Link https://www.tutorialspoint.com/selenium/practice/login.php| Status 200\n"
+                    },
+                    {
+                      "text": "Valid Link https://www.tutorialspoint.com/selenium/practice/register.php| Status 200\n"
+                    },
+                    {
+                      "text": "Valid Link https://www.tutorialspoint.com/selenium/practice/browser-windows.php| Status 200\n"
+                    },
+                    {
+                      "text": "Valid Link https://www.tutorialspoint.com/selenium/practice/alerts.php| Status 200\n"
+                    },
+                    {
+                      "text": "Valid Link https://www.tutorialspoint.com/selenium/practice/frames.php| Status 200\n"
+                    },
+                    {
+                      "text": "Valid Link https://www.tutorialspoint.com/selenium/practice/nestedframes.php| Status 200\n"
+                    },
+                    {
+                      "text": "Valid Link https://www.tutorialspoint.com/selenium/practice/modal-dialogs.php| Status 200\n"
+                    },
+                    {
+                      "text": "Valid Link https://www.tutorialspoint.com/selenium/practice/accordion.php| Status 200\n"
+                    },
+                    {
+                      "text": "Valid Link https://www.tutorialspoint.com/selenium/practice/auto-complete.php| Status 200\n"
+                    },
+                    {
+                      "text": "Valid Link https://www.tutorialspoint.com/selenium/practice/date-picker.php| Status 200\n"
+                    },
+                    {
+                      "text": "Valid Link https://www.tutorialspoint.com/selenium/practice/slider.php| Status 200\n"
+                    },
+                    {
+                      "text": "Valid Link https://www.tutorialspoint.com/selenium/practice/progress-bar.php| Status 200\n"
+                    },
+                    {
+                      "text": "Valid Link https://www.tutorialspoint.com/selenium/practice/tabs.php| Status 200\n"
+                    },
+                    {
+                      "text": "Valid Link https://www.tutorialspoint.com/selenium/practice/tool-tips.php| Status 200\n"
+                    },
+                    {
+                      "text": "Valid Link https://www.tutorialspoint.com/selenium/practice/menu.php| Status 200\n"
+                    },
+                    {
+                      "text": "Valid Link https://www.tutorialspoint.com/selenium/practice/select-menu.php| Status 200\n"
+                    },
+                    {
+                      "text": "Valid Link https://www.tutorialspoint.com/selenium/practice/scroll-top.php| Status 200\n"
+                    },
+                    {
+                      "text": "Valid Link https://www.tutorialspoint.com/selenium/practice/scroll-down.php| Status 200\n"
+                    },
+                    {
+                      "text": "Valid Link https://www.tutorialspoint.com/selenium/practice/horizontal-scroll.php| Status 200\n"
+                    },
+                    {
+                      "text": "Valid Link https://www.tutorialspoint.com/selenium/practice/sortable.php| Status 200\n"
+                    },
+                    {
+                      "text": "Valid Link https://www.tutorialspoint.com/selenium/practice/selectable.php| Status 200\n"
+                    },
+                    {
+                      "text": "Valid Link https://www.tutorialspoint.com/selenium/practice/resizable.php| Status 200\n"
+                    },
+                    {
+                      "text": "Valid Link https://www.tutorialspoint.com/selenium/practice/droppable.php| Status 200\n"
+                    },
+                    {
+                      "text": "Valid Link https://www.tutorialspoint.com/selenium/practice/dragabble.php| Status 200\n"
                     }
                   ],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2025-10-04T09:35:08.853Z",
+                  "startTime": "2025-10-04T10:46:00.649Z",
                   "annotations": [],
                   "attachments": []
                 }
@@ -119,9 +224,9 @@
               "status": "expected"
             }
           ],
-          "id": "2e96c2b0808d91c47b1e-5ac1274fb96f69996d7d",
+          "id": "2e96c2b0808d91c47b1e-a6883002c8def567a052",
           "file": "practise.spec.js",
-          "line": 154,
+          "line": 179,
           "column": 6
         }
       ]
@@ -129,8 +234,8 @@
   ],
   "errors": [],
   "stats": {
-    "startTime": "2025-10-04T09:35:08.236Z",
-    "duration": 9661.479,
+    "startTime": "2025-10-04T10:45:59.991Z",
+    "duration": 18935.376,
     "expected": 1,
     "skipped": 0,
     "unexpected": 0,
