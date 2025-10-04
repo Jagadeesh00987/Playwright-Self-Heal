@@ -126,7 +126,7 @@ await expect(page).toHaveURL("https://www.tutorialspoint.com/selenium/practice/s
 });
 
 
-test.only('Click all links in a page',async({page})=>{
+test('Click all links in a page',async({page})=>{
 
 await page.goto(
     "https://www.tutorialspoint.com/selenium/practice/slider.php"
@@ -151,3 +151,33 @@ await page.goto(
   }
 })
 
+test.only('Validate all images on the page', async ({ page }) => {
+  // Go to your target page
+ await page.goto(
+    "https://www.tutorialspoint.com/selenium/practice/slider.php"
+  );
+  await page.locator("//button[normalize-space()='Elements']").click();
+  await page.locator("//a[normalize-space()='Broken Links - Images']").click();
+  // Get all image elements
+  const images = page.locator('img');
+  const count = await images.count();
+  console.log(`Found ${count} images`);
+
+  for(let i=0;i<count;i++){
+   const img=images.nth(i); 
+   const src=img.getAttribute('src')
+   const isBroken=await img.evaluate((node)=>{
+    return !(node.naturalWidth && node.complete>0)
+   })
+     if(isBroken){
+    console.log(`Image with src ${src} is broken`);
+  }
+  else{
+    console.log(`Image with src ${src} is valid`);
+  }
+  }
+
+
+
+  
+});

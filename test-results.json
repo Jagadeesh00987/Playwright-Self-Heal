@@ -84,8 +84,8 @@
       "line": 0,
       "specs": [
         {
-          "title": "Click all links in a page",
-          "ok": false,
+          "title": "Validate all images on the page",
+          "ok": true,
           "tags": [],
           "tests": [
             {
@@ -98,52 +98,30 @@
                 {
                   "workerIndex": 0,
                   "parallelIndex": 0,
-                  "status": "timedOut",
-                  "duration": 30602,
-                  "error": {
-                    "message": "\u001b[31mTest timeout of 30000ms exceeded.\u001b[39m",
-                    "stack": "\u001b[31mTest timeout of 30000ms exceeded.\u001b[39m"
-                  },
-                  "errors": [
-                    {
-                      "message": "\u001b[31mTest timeout of 30000ms exceeded.\u001b[39m"
-                    },
-                    {
-                      "location": {
-                        "file": "C:\\Users\\jagadeesh\\Desktop\\Self_Heal\\tests\\practise.spec.js",
-                        "column": 14,
-                        "line": 145
-                      },
-                      "message": "Error: page.waitForEvent: Test timeout of 30000ms exceeded.\n=========================== logs ===========================\nwaiting for event \"popup\"\n============================================================\n\n\u001b[0m \u001b[90m 143 |\u001b[39m       console\u001b[33m.\u001b[39mlog(linkText)\u001b[33m;\u001b[39m\n \u001b[90m 144 |\u001b[39m       \u001b[36mawait\u001b[39m \u001b[33mPromise\u001b[39m\u001b[33m.\u001b[39mall([\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 145 |\u001b[39m         page\u001b[33m.\u001b[39mwaitForEvent(\u001b[32m'popup'\u001b[39m)\u001b[33m,\u001b[39m\n \u001b[90m     |\u001b[39m              \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 146 |\u001b[39m         link\u001b[33m.\u001b[39mclick()\n \u001b[90m 147 |\u001b[39m       ])\u001b[33m;\u001b[39m\n \u001b[90m 148 |\u001b[39m       console\u001b[33m.\u001b[39mlog(page\u001b[33m.\u001b[39murl())\u001b[33m;\u001b[39m\u001b[0m\n\u001b[2m    at C:\\Users\\jagadeesh\\Desktop\\Self_Heal\\tests\\practise.spec.js:145:14\u001b[22m"
-                    }
-                  ],
+                  "status": "passed",
+                  "duration": 8409,
+                  "errors": [],
                   "stdout": [
                     {
-                      "text": "\n\t\t\t\t\n\t\t\t\t\n\t\t\t\t\n\t\t\t\t\n\t\t\t\t\n\t\t\t\t\n\t\t\t\t\n\t\t\t\t\n\t\t\t\t\n"
+                      "text": "Found 1 images\n"
                     },
                     {
-                      "text": "\n\t\t\t\t\n\t\t\t\t\n\t\t\t\t\n\t\t\t\t\n\t\t\t\t\n\t\t\t\t\n\t\t\t\t\n\t\t\t\t\n\t\t\t\t\n"
+                      "text": "Image with src [object Promise] is broken\n"
                     }
                   ],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2025-10-04T07:09:44.472Z",
+                  "startTime": "2025-10-04T09:35:08.853Z",
                   "annotations": [],
-                  "attachments": [
-                    {
-                      "name": "error-context",
-                      "contentType": "text/markdown",
-                      "path": "C:\\Users\\jagadeesh\\Desktop\\Self_Heal\\test-results\\practise-Click-all-links-in-a-page-chromium\\error-context.md"
-                    }
-                  ]
+                  "attachments": []
                 }
               ],
-              "status": "unexpected"
+              "status": "expected"
             }
           ],
-          "id": "2e96c2b0808d91c47b1e-2a354d719cd1ba3f6f1c",
+          "id": "2e96c2b0808d91c47b1e-5ac1274fb96f69996d7d",
           "file": "practise.spec.js",
-          "line": 129,
+          "line": 154,
           "column": 6
         }
       ]
@@ -151,11 +129,11 @@
   ],
   "errors": [],
   "stats": {
-    "startTime": "2025-10-04T07:09:43.500Z",
-    "duration": 32650.412999999997,
-    "expected": 0,
+    "startTime": "2025-10-04T09:35:08.236Z",
+    "duration": 9661.479,
+    "expected": 1,
     "skipped": 0,
-    "unexpected": 1,
+    "unexpected": 0,
     "flaky": 0
   }
 }
