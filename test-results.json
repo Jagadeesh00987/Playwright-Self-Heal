@@ -99,11 +99,11 @@
                   "workerIndex": 0,
                   "parallelIndex": 0,
                   "status": "passed",
-                  "duration": 17452,
+                  "duration": 22215,
                   "errors": [],
                   "stdout": [
                     {
-                      "text": "Broken 36 Links \n"
+                      "text": "Total 45 Links \n"
                     },
                     {
                       "text": "Valid Link https://www.tutorialspoint.com| Status 200\n"
@@ -212,11 +212,38 @@
                     },
                     {
                       "text": "Valid Link https://www.tutorialspoint.com/selenium/practice/dragabble.php| Status 200\n"
+                    },
+                    {
+                      "text": "Valid Link https://www.tutorialspoint.com/index.htm| Status 200\n"
+                    },
+                    {
+                      "text": "⚠️ Skipping invalid link: javascript:void(0);\n"
+                    },
+                    {
+                      "text": "⚠️ Skipping invalid link: javascript:void(0);\n"
+                    },
+                    {
+                      "text": "⚠️ Skipping invalid link: javascript:void(0)\n"
+                    },
+                    {
+                      "text": "⚠️ Skipping invalid link: javascript:void(0)\n"
+                    },
+                    {
+                      "text": "⚠️ Skipping invalid link: javascript:void(0)\n"
+                    },
+                    {
+                      "text": "⚠️ Skipping invalid link: javascript:void(0)\n"
+                    },
+                    {
+                      "text": "⚠️ Skipping invalid link: javascript:void(0)\n"
+                    },
+                    {
+                      "text": "⚠️ Skipping invalid link: javascript:void(0)\n"
                     }
                   ],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2025-10-04T10:46:00.649Z",
+                  "startTime": "2025-10-04T12:08:41.216Z",
                   "annotations": [],
                   "attachments": []
                 }
@@ -234,8 +261,8 @@
   ],
   "errors": [],
   "stats": {
-    "startTime": "2025-10-04T10:45:59.991Z",
-    "duration": 18935.376,
+    "startTime": "2025-10-04T12:08:40.104Z",
+    "duration": 24075.095,
     "expected": 1,
     "skipped": 0,
     "unexpected": 0,

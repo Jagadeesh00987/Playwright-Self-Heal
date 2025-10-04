@@ -180,9 +180,11 @@ test.only("Broken Links", async ({ page }) => {
   await page.goto(
     "https://www.tutorialspoint.com/selenium/practice/slider.php"
   );
-  // await page.locator("//button[normalize-space()='Elements']").click();
+  await page.locator("//button[normalize-space()='Elements']").click();
   // await page.locator("//a[normalize-space()='Broken Links - Images']").click();
-
+  await page.locator("//a[normalize-space()='Links']").click();
+  await page.locator("//button[normalize-space()='Elements']").click();
+  //await page.locator("//a[normalize-space()='Broken Links - Images']").click();
   const brokenLinks = await page.locator("//a");
   const LinkCount = await brokenLinks.count();
   console.log(`Total ${LinkCount} Links `);
@@ -191,13 +193,18 @@ test.only("Broken Links", async ({ page }) => {
     const link = brokenLinks.nth(i);
     let url = await link.getAttribute("href");
 
-    if (!url || url === "#" || url.toLowerCase().startsWith("JavaScript")) {
-      console.log(`Invalid Link is :${url}`);
+     if (
+      !url ||
+      url === "#" ||
+      url.toLowerCase().startsWith("javascript") ||
+      url.toLowerCase().startsWith("mailto")
+    ) {
+      console.log(`⚠️ Skipping invalid link: ${url}`);
       continue;
     }
-    if (url.startsWith("/")) {
-      url = new URL(url, page.url()).toString();
-    } else if (!url.startsWith("http")) {
+
+    // ✅ Convert relative URLs to absolute
+    if (!url.startsWith("http")) {
       url = new URL(url, page.url()).toString();
     }
 
