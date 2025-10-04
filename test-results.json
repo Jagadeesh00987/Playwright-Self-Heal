@@ -1,7 +1,7 @@
 {
   "config": {
-    "configFile": "C:\\Users\\jagadeesh\\Desktop\\Self_Heal\\playwright.config.js",
-    "rootDir": "C:/Users/jagadeesh/Desktop/Self_Heal/tests",
+    "configFile": "C:\\Users\\jagad\\OneDrive\\Desktop\\Playwright-Self-Heal\\playwright.config.js",
+    "rootDir": "C:/Users/jagad/OneDrive/Desktop/Playwright-Self-Heal/tests",
     "forbidOnly": false,
     "fullyParallel": true,
     "globalSetup": null,
@@ -37,7 +37,7 @@
     "quiet": false,
     "projects": [
       {
-        "outputDir": "C:/Users/jagadeesh/Desktop/Self_Heal/test-results",
+        "outputDir": "C:/Users/jagad/OneDrive/Desktop/Playwright-Self-Heal/test-results",
         "repeatEach": 1,
         "retries": 0,
         "metadata": {
@@ -45,7 +45,7 @@
         },
         "id": "chromium",
         "name": "chromium",
-        "testDir": "C:/Users/jagadeesh/Desktop/Self_Heal/tests",
+        "testDir": "C:/Users/jagad/OneDrive/Desktop/Playwright-Self-Heal/tests",
         "testIgnore": [],
         "testMatch": [
           "**/*.@(spec|test).?(c|m)[jt]s?(x)"
@@ -53,7 +53,7 @@
         "timeout": 30000
       },
       {
-        "outputDir": "C:/Users/jagadeesh/Desktop/Self_Heal/test-results",
+        "outputDir": "C:/Users/jagad/OneDrive/Desktop/Playwright-Self-Heal/test-results",
         "repeatEach": 1,
         "retries": 0,
         "metadata": {
@@ -61,7 +61,7 @@
         },
         "id": "webkit",
         "name": "webkit",
-        "testDir": "C:/Users/jagadeesh/Desktop/Self_Heal/tests",
+        "testDir": "C:/Users/jagad/OneDrive/Desktop/Playwright-Self-Heal/tests",
         "testIgnore": [],
         "testMatch": [
           "**/*.@(spec|test).?(c|m)[jt]s?(x)"
@@ -72,7 +72,7 @@
     "shard": null,
     "updateSnapshots": "missing",
     "updateSourceMethod": "patch",
-    "version": "1.55.0",
+    "version": "1.55.1",
     "workers": 6,
     "webServer": null
   },
@@ -84,7 +84,7 @@
       "line": 0,
       "specs": [
         {
-          "title": "Broken Links",
+          "title": "Forms",
           "ok": true,
           "tags": [],
           "tests": [
@@ -99,151 +99,12 @@
                   "workerIndex": 0,
                   "parallelIndex": 0,
                   "status": "passed",
-                  "duration": 22215,
+                  "duration": 2465,
                   "errors": [],
-                  "stdout": [
-                    {
-                      "text": "Total 45 Links \n"
-                    },
-                    {
-                      "text": "Valid Link https://www.tutorialspoint.com| Status 200\n"
-                    },
-                    {
-                      "text": "Valid Link https://www.tutorialspoint.com/selenium/index.htm| Status 200\n"
-                    },
-                    {
-                      "text": "Valid Link https://www.tutorialspoint.com/selenium/practice/text-box.php| Status 200\n"
-                    },
-                    {
-                      "text": "Valid Link https://www.tutorialspoint.com/selenium/practice/check-box.php| Status 200\n"
-                    },
-                    {
-                      "text": "Valid Link https://www.tutorialspoint.com/selenium/practice/radio-button.php| Status 200\n"
-                    },
-                    {
-                      "text": "Valid Link https://www.tutorialspoint.com/selenium/practice/webtables.php| Status 200\n"
-                    },
-                    {
-                      "text": "Valid Link https://www.tutorialspoint.com/selenium/practice/buttons.php| Status 200\n"
-                    },
-                    {
-                      "text": "Valid Link https://www.tutorialspoint.com/selenium/practice/links.php| Status 200\n"
-                    },
-                    {
-                      "text": "Valid Link https://www.tutorialspoint.com/selenium/practice/broken-links.php| Status 200\n"
-                    },
-                    {
-                      "text": "Valid Link https://www.tutorialspoint.com/selenium/practice/upload-download.php| Status 200\n"
-                    },
-                    {
-                      "text": "Valid Link https://www.tutorialspoint.com/selenium/practice/dynamic-prop.php| Status 200\n"
-                    },
-                    {
-                      "text": "Valid Link https://www.tutorialspoint.com/selenium/practice/selenium_automation_practice.php| Status 200\n"
-                    },
-                    {
-                      "text": "Valid Link https://www.tutorialspoint.com/selenium/practice/login.php| Status 200\n"
-                    },
-                    {
-                      "text": "Valid Link https://www.tutorialspoint.com/selenium/practice/register.php| Status 200\n"
-                    },
-                    {
-                      "text": "Valid Link https://www.tutorialspoint.com/selenium/practice/browser-windows.php| Status 200\n"
-                    },
-                    {
-                      "text": "Valid Link https://www.tutorialspoint.com/selenium/practice/alerts.php| Status 200\n"
-                    },
-                    {
-                      "text": "Valid Link https://www.tutorialspoint.com/selenium/practice/frames.php| Status 200\n"
-                    },
-                    {
-                      "text": "Valid Link https://www.tutorialspoint.com/selenium/practice/nestedframes.php| Status 200\n"
-                    },
-                    {
-                      "text": "Valid Link https://www.tutorialspoint.com/selenium/practice/modal-dialogs.php| Status 200\n"
-                    },
-                    {
-                      "text": "Valid Link https://www.tutorialspoint.com/selenium/practice/accordion.php| Status 200\n"
-                    },
-                    {
-                      "text": "Valid Link https://www.tutorialspoint.com/selenium/practice/auto-complete.php| Status 200\n"
-                    },
-                    {
-                      "text": "Valid Link https://www.tutorialspoint.com/selenium/practice/date-picker.php| Status 200\n"
-                    },
-                    {
-                      "text": "Valid Link https://www.tutorialspoint.com/selenium/practice/slider.php| Status 200\n"
-                    },
-                    {
-                      "text": "Valid Link https://www.tutorialspoint.com/selenium/practice/progress-bar.php| Status 200\n"
-                    },
-                    {
-                      "text": "Valid Link https://www.tutorialspoint.com/selenium/practice/tabs.php| Status 200\n"
-                    },
-                    {
-                      "text": "Valid Link https://www.tutorialspoint.com/selenium/practice/tool-tips.php| Status 200\n"
-                    },
-                    {
-                      "text": "Valid Link https://www.tutorialspoint.com/selenium/practice/menu.php| Status 200\n"
-                    },
-                    {
-                      "text": "Valid Link https://www.tutorialspoint.com/selenium/practice/select-menu.php| Status 200\n"
-                    },
-                    {
-                      "text": "Valid Link https://www.tutorialspoint.com/selenium/practice/scroll-top.php| Status 200\n"
-                    },
-                    {
-                      "text": "Valid Link https://www.tutorialspoint.com/selenium/practice/scroll-down.php| Status 200\n"
-                    },
-                    {
-                      "text": "Valid Link https://www.tutorialspoint.com/selenium/practice/horizontal-scroll.php| Status 200\n"
-                    },
-                    {
-                      "text": "Valid Link https://www.tutorialspoint.com/selenium/practice/sortable.php| Status 200\n"
-                    },
-                    {
-                      "text": "Valid Link https://www.tutorialspoint.com/selenium/practice/selectable.php| Status 200\n"
-                    },
-                    {
-                      "text": "Valid Link https://www.tutorialspoint.com/selenium/practice/resizable.php| Status 200\n"
-                    },
-                    {
-                      "text": "Valid Link https://www.tutorialspoint.com/selenium/practice/droppable.php| Status 200\n"
-                    },
-                    {
-                      "text": "Valid Link https://www.tutorialspoint.com/selenium/practice/dragabble.php| Status 200\n"
-                    },
-                    {
-                      "text": "Valid Link https://www.tutorialspoint.com/index.htm| Status 200\n"
-                    },
-                    {
-                      "text": "⚠️ Skipping invalid link: javascript:void(0);\n"
-                    },
-                    {
-                      "text": "⚠️ Skipping invalid link: javascript:void(0);\n"
-                    },
-                    {
-                      "text": "⚠️ Skipping invalid link: javascript:void(0)\n"
-                    },
-                    {
-                      "text": "⚠️ Skipping invalid link: javascript:void(0)\n"
-                    },
-                    {
-                      "text": "⚠️ Skipping invalid link: javascript:void(0)\n"
-                    },
-                    {
-                      "text": "⚠️ Skipping invalid link: javascript:void(0)\n"
-                    },
-                    {
-                      "text": "⚠️ Skipping invalid link: javascript:void(0)\n"
-                    },
-                    {
-                      "text": "⚠️ Skipping invalid link: javascript:void(0)\n"
-                    }
-                  ],
+                  "stdout": [],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2025-10-04T12:08:41.216Z",
+                  "startTime": "2025-10-04T17:29:37.512Z",
                   "annotations": [],
                   "attachments": []
                 }
@@ -251,9 +112,9 @@
               "status": "expected"
             }
           ],
-          "id": "2e96c2b0808d91c47b1e-a6883002c8def567a052",
+          "id": "2e96c2b0808d91c47b1e-660bd2c0e47592e30921",
           "file": "practise.spec.js",
-          "line": 179,
+          "line": 263,
           "column": 6
         }
       ]
@@ -261,8 +122,8 @@
   ],
   "errors": [],
   "stats": {
-    "startTime": "2025-10-04T12:08:40.104Z",
-    "duration": 24075.095,
+    "startTime": "2025-10-04T17:29:36.393Z",
+    "duration": 4075.7810000000004,
     "expected": 1,
     "skipped": 0,
     "unexpected": 0,
