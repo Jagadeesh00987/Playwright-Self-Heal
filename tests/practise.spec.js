@@ -107,13 +107,14 @@ await page.locator("//button[normalize-space()='Right Click Me']").click({button
 // await expect(text2.includes("You have done a right click")).toBeTruthy();
 });
 
-test.only('Links',async({page})=>{
+test('Links',async({page})=>{
 await page.goto(
     "https://www.tutorialspoint.com/selenium/practice/slider.php"
   );
  await page.locator("//button[normalize-space()='Elements']").click();
 await page.locator("//a[normalize-space()='Links']").click();
 const [newPage]=await Promise.all([
+
 page.waitForEvent('popup'),
 page.locator("//a[normalize-space()='Home']").click()
 
@@ -123,3 +124,30 @@ await expect(newPage).toHaveURL("https://www.tutorialspoint.com/index.htm");
 await page.goBack();
 await expect(page).toHaveURL("https://www.tutorialspoint.com/selenium/practice/slider.php");
 });
+
+
+test.only('Click all links in a page',async({page})=>{
+
+await page.goto(
+    "https://www.tutorialspoint.com/selenium/practice/slider.php"
+  );
+
+  const all_links=await page.locator("//a");
+  const countOfLinks=await all_links.count();
+
+  for(let i=0;i<countOfLinks;i++){
+    const link=await all_links.nth(i);
+    const linkText=await link.textContent();
+    console.log(linkText)
+    if(linkText.length>0){
+      console.log(linkText);
+      await Promise.all([
+        page.waitForEvent('popup'),
+        link.click()
+      ]);
+      console.log(page.url());
+      await page.goBack();
+    }
+  }
+})
+
