@@ -84,8 +84,8 @@
       "line": 0,
       "specs": [
         {
-          "title": "Alerts",
-          "ok": true,
+          "title": "Scrolling Top",
+          "ok": false,
           "tags": [],
           "tests": [
             {
@@ -98,42 +98,47 @@
                 {
                   "workerIndex": 0,
                   "parallelIndex": 0,
-                  "status": "passed",
-                  "duration": 16944,
-                  "errors": [],
-                  "stdout": [
-                    {
-                      "text": "Hello world!\n"
+                  "status": "failed",
+                  "duration": 9839,
+                  "error": {
+                    "message": "Error: locator.click: Target page, context or browser has been closed\nCall log:\n\u001b[2m  - waiting for locator('//a[normalize-space()=\\'Scroll Top\\']')\u001b[22m\n",
+                    "stack": "Error: locator.click: Target page, context or browser has been closed\nCall log:\n\u001b[2m  - waiting for locator('//a[normalize-space()=\\'Scroll Top\\']')\u001b[22m\n\n    at C:\\Users\\jagadeesh\\Desktop\\Self_Heal\\tests\\practise.spec.js:370:59",
+                    "location": {
+                      "file": "C:\\Users\\jagadeesh\\Desktop\\Self_Heal\\tests\\practise.spec.js",
+                      "column": 59,
+                      "line": 370
                     },
+                    "snippet": "\u001b[0m \u001b[90m 368 |\u001b[39m   )\u001b[33m;\u001b[39m\n \u001b[90m 369 |\u001b[39m \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mlocator(\u001b[32m\"//button[normalize-space()='Widgets']\"\u001b[39m)\u001b[33m.\u001b[39mclick()\u001b[33m;\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 370 |\u001b[39m \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mlocator(\u001b[32m\"//a[normalize-space()='Scroll Top']\"\u001b[39m)\u001b[33m.\u001b[39mclick()\u001b[33m;\u001b[39m\n \u001b[90m     |\u001b[39m                                                           \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 371 |\u001b[39m\n \u001b[90m 372 |\u001b[39m \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mevaluate(() \u001b[33m=>\u001b[39m {\n \u001b[90m 373 |\u001b[39m   window\u001b[33m.\u001b[39mscrollTo(\u001b[35m0\u001b[39m\u001b[33m,\u001b[39m \u001b[35m0\u001b[39m)\u001b[33m;\u001b[39m\u001b[0m"
+                  },
+                  "errors": [
                     {
-                      "text": "Hello just appeared\n"
-                    },
-                    {
-                      "text": "The timer alert handled successfully\n"
-                    },
-                    {
-                      "text": "Press a button!\n"
-                    },
-                    {
-                      "text": "The alert handle successfully\n"
-                    },
-                    {
-                      "text": "What is your name?\n"
+                      "location": {
+                        "file": "C:\\Users\\jagadeesh\\Desktop\\Self_Heal\\tests\\practise.spec.js",
+                        "column": 59,
+                        "line": 370
+                      },
+                      "message": "Error: locator.click: Target page, context or browser has been closed\nCall log:\n\u001b[2m  - waiting for locator('//a[normalize-space()=\\'Scroll Top\\']')\u001b[22m\n\n\n\u001b[0m \u001b[90m 368 |\u001b[39m   )\u001b[33m;\u001b[39m\n \u001b[90m 369 |\u001b[39m \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mlocator(\u001b[32m\"//button[normalize-space()='Widgets']\"\u001b[39m)\u001b[33m.\u001b[39mclick()\u001b[33m;\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 370 |\u001b[39m \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mlocator(\u001b[32m\"//a[normalize-space()='Scroll Top']\"\u001b[39m)\u001b[33m.\u001b[39mclick()\u001b[33m;\u001b[39m\n \u001b[90m     |\u001b[39m                                                           \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 371 |\u001b[39m\n \u001b[90m 372 |\u001b[39m \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mevaluate(() \u001b[33m=>\u001b[39m {\n \u001b[90m 373 |\u001b[39m   window\u001b[33m.\u001b[39mscrollTo(\u001b[35m0\u001b[39m\u001b[33m,\u001b[39m \u001b[35m0\u001b[39m)\u001b[33m;\u001b[39m\u001b[0m\n\u001b[2m    at C:\\Users\\jagadeesh\\Desktop\\Self_Heal\\tests\\practise.spec.js:370:59\u001b[22m"
                     }
                   ],
+                  "stdout": [],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2025-10-06T05:16:31.335Z",
+                  "startTime": "2025-10-06T09:25:45.001Z",
                   "annotations": [],
-                  "attachments": []
+                  "attachments": [],
+                  "errorLocation": {
+                    "file": "C:\\Users\\jagadeesh\\Desktop\\Self_Heal\\tests\\practise.spec.js",
+                    "column": 59,
+                    "line": 370
+                  }
                 }
               ],
-              "status": "expected"
+              "status": "unexpected"
             }
           ],
-          "id": "2e96c2b0808d91c47b1e-756dbe4fae083c56b2af",
+          "id": "2e96c2b0808d91c47b1e-0f4517300ec99181b4fa",
           "file": "practise.spec.js",
-          "line": 283,
+          "line": 364,
           "column": 6
         }
       ]
@@ -141,11 +146,11 @@
   ],
   "errors": [],
   "stats": {
-    "startTime": "2025-10-06T05:16:30.653Z",
-    "duration": 18506.240999999998,
-    "expected": 1,
+    "startTime": "2025-10-06T09:25:44.358Z",
+    "duration": 11068.296,
+    "expected": 0,
     "skipped": 0,
-    "unexpected": 0,
+    "unexpected": 1,
     "flaky": 0
   }
 }

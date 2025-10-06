@@ -280,7 +280,7 @@ test("Forms", async ({ page }) => {
 });
 
 //Alerts
-test.only("Alerts", async ({ page }) => {
+test("Alerts", async ({ page }) => {
   await page.goto(
     "https://www.tutorialspoint.com/selenium/practice/slider.php"
   );
@@ -318,3 +318,59 @@ await dialog.accept("Playwright User")
 })
 await page.locator("//button[@onclick='myPromp()']").click();
  });
+
+ test("Frames",async({page})=>{
+ await page.goto(
+    "https://www.tutorialspoint.com/selenium/practice/slider.php"
+  );
+  await page.locator("//button[normalize-space()='Alerts, Frames & Windows']").click();
+  await page.locator("a[href='frames.php']").click();
+  const frame1 = page.frameLocator("iframe[src*='new-tab-sample.php']").nth(0);
+  console.log(await frame1.locator("h1").nth(0).textContent());
+
+  // Click link and handle new tab
+  const [popup] = await Promise.all([
+    page.waitForEvent("popup"), // Wait for new tab
+    frame1.locator("a:has-text('Selenium Tutorial')").click(),
+  ]);
+
+  await popup.waitForLoadState("domcontentloaded");
+  console.log("Popup URL:", popup.url());
+  console.log("Popup Title:", await popup.title());
+
+  // Optional: close the popup
+  await popup.close();
+});
+
+test("Scrolling", async ({ page }) => {
+  await page.goto(
+    "https://www.tutorialspoint.com/selenium/practice/slider.php"
+  );
+await page.locator("//button[normalize-space()='Widgets']").click();
+await page.locator("//a[normalize-space()='Scoll Down']").click();
+await page.evaluate(() => {
+  window.scrollTo(0, document.body.scrollHeight);
+});
+await page.evaluate(() => {
+  window.scrollTo(0, 0);
+});
+
+await page.locator("//a[normalize-space()='Scroll Top']").click();
+await page.evaluate(() => {
+  window.scrollTo(0, 0);
+});
+
+});
+test.only("Scrolling Top",async({page})=>{
+
+  await page.goto(
+    "https://www.tutorialspoint.com/selenium/practice/slider.php"
+  );
+await page.locator("//button[normalize-space()='Widgets']").click();
+await page.locator("//a[normalize-space()='Scroll Top']").click();
+
+await page.evaluate(() => {
+  window.scrollTo(0, 0);
+});
+})
+
