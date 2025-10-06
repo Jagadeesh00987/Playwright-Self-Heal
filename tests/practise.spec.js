@@ -1,6 +1,6 @@
 const { test, expect } = require("@playwright/test");
 const { TIMEOUT } = require("dns");
-const fs = require('fs');
+const fs = require("fs");
 const { value } = require("jsonpath");
 
 test.describe("My first Test Suite", () => {
@@ -177,7 +177,7 @@ test("Validate all images on the page", async ({ page }) => {
     }
   }
 });
-
+//Broken Links
 test("Broken Links", async ({ page }) => {
   await page.goto(
     "https://www.tutorialspoint.com/selenium/practice/slider.php"
@@ -212,18 +212,15 @@ test("Broken Links", async ({ page }) => {
 
     const response = await page.request.get(url);
     if (!response.ok()) {
-      console.log(`Broken Link ${url}| Status ${response.status()}`)
-    }
-    else {
-      console.log(`Valid Link ${url}| Status ${response.status()}`)
+      console.log(`Broken Link ${url}| Status ${response.status()}`);
+    } else {
+      console.log(`Valid Link ${url}| Status ${response.status()}`);
     }
     //expect(response.ok()).toBeTruthy();
   }
-
-
 });
-
-test('Upload and Download', async ({ page }) => {
+//Upload and Download
+test("Upload and Download", async ({ page }) => {
   await page.goto(
     "https://www.tutorialspoint.com/selenium/practice/slider.php"
   );
@@ -231,10 +228,9 @@ test('Upload and Download', async ({ page }) => {
   await page.locator("//a[normalize-space()='Upload and Download']").click();
 
   const [download] = await Promise.all([
-    page.waitForEvent('download'),
+    page.waitForEvent("download"),
     page.locator("#downloadButton").click(),
   ]);
-
 
   const downloadPath = await download.path();
   console.log(`File downloaded to: ${downloadPath}`);
@@ -243,24 +239,24 @@ test('Upload and Download', async ({ page }) => {
   // const uploadedFileName=await page.locator("#uploadedFilePath").textContent();
   // console.log(uploadedFileName);
   // expect(uploadedFileName.includes("sampleFile.jpeg")).toBeTruthy();
-
 });
 
-test('download file example', async ({ page }) => {
-  await page.goto('https://the-internet.herokuapp.com/download');
+//Download file example
+test("download file example", async ({ page }) => {
+  await page.goto("https://the-internet.herokuapp.com/download");
 
   const [download] = await Promise.all([
-    page.waitForEvent('download'),
+    page.waitForEvent("download"),
     page.locator("//a[normalize-space()='sampleFile.txt']").click(),
-
-  ])
-  const filePath = 'downloads/sampleFile.txt';
+  ]);
+  const filePath = "downloads/sampleFile.txt";
   await download.saveAs(filePath);
   console.log(`File downloaded to: ${filePath}`);
   expect(fs.existsSync(filePath)).toBeTruthy();
 });
 
-test.only('Forms', async ({ page }) => {
+//Forms
+test("Forms", async ({ page }) => {
   await page.goto(
     "https://www.tutorialspoint.com/selenium/practice/slider.php"
   );
@@ -271,12 +267,54 @@ test.only('Forms', async ({ page }) => {
   await page.locator("#gender").check();
   await page.locator("#mobile").fill("9876543210");
   await page.locator("#dob").clear();
-  await page.locator("#dob").fill("1993-09-30")
+  await page.locator("#dob").fill("1993-09-30");
   await page.locator("#subjects").fill("Science");
   await page.locator("input[type='checkbox']").nth(0).check();
   await page.setInputFiles("input[type='file']", "downloads/sampleFile.txt");
-  await page.locator("textarea[placeholder='Currend Address']").fill("No 123, ABC Street XYZ City");
-  await page.locator('#state').selectOption("NCR");
-  await page.locator('#city').selectOption("Lucknow");
+  await page
+    .locator("textarea[placeholder='Currend Address']")
+    .fill("No 123, ABC Street XYZ City");
+  await page.locator("#state").selectOption("NCR");
+  await page.locator("#city").selectOption("Lucknow");
   await page.locator("input[type='submit']").click();
+});
+
+//Alerts
+test.only("Alerts", async ({ page }) => {
+  await page.goto(
+    "https://www.tutorialspoint.com/selenium/practice/slider.php"
+  );
+  await page.locator("//button[normalize-space()='Alerts, Frames & Windows']").click();
+  await page.locator("//a[normalize-space()='Alerts']").click();
+  //Alerts
+  page.once("dialog", async (dialog) => {
+    console.log(dialog.message());
+    await dialog.accept();
+  });
+  await page.locator("//button[normalize-space()='Alert']").click();
+  
+
+  //Alerts will display after 5 sec
+  page.once("dialog",async(dialog)=>{
+    console.log(dialog.message());
+    await dialog.accept();                              // (page.on==> can be used to handle only one alert in a page)
+  });                                                  //(page.once==>can be used to handle mutiple alert in apage or in a test)
+  await page.locator("//button[@onclick='myMessage()']").click();
+  await page.waitForEvent('dialog',{timeout:7000});
+  console.log("The timer alert handled successfully")
+
+//Confirm Alerts
+page.once("dialog",async(dialog)=>{
+console.log(dialog.message());
+await dialog.dismiss();
+});
+await page.locator("//button[@onclick='myDesk()']").click();
+console.log('The alert handle successfully')
+ 
+//prompt alert
+page.once('dialog',async(dialog)=>{
+console.log(dialog.message());
+await dialog.accept("Playwright User")
 })
+await page.locator("//button[@onclick='myPromp()']").click();
+ });
