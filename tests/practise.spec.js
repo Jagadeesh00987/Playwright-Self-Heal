@@ -372,5 +372,6 @@ await page.locator("//a[normalize-space()='Scroll Top']").click();
 await page.evaluate(() => {
   window.scrollTo(0, 0);
 });
+
 })
 

@@ -98,39 +98,37 @@
                 {
                   "workerIndex": 0,
                   "parallelIndex": 0,
-                  "status": "failed",
-                  "duration": 9839,
+                  "status": "timedOut",
+                  "duration": 30171,
                   "error": {
-                    "message": "Error: locator.click: Target page, context or browser has been closed\nCall log:\n\u001b[2m  - waiting for locator('//a[normalize-space()=\\'Scroll Top\\']')\u001b[22m\n",
-                    "stack": "Error: locator.click: Target page, context or browser has been closed\nCall log:\n\u001b[2m  - waiting for locator('//a[normalize-space()=\\'Scroll Top\\']')\u001b[22m\n\n    at C:\\Users\\jagadeesh\\Desktop\\Self_Heal\\tests\\practise.spec.js:370:59",
-                    "location": {
-                      "file": "C:\\Users\\jagadeesh\\Desktop\\Self_Heal\\tests\\practise.spec.js",
-                      "column": 59,
-                      "line": 370
-                    },
-                    "snippet": "\u001b[0m \u001b[90m 368 |\u001b[39m   )\u001b[33m;\u001b[39m\n \u001b[90m 369 |\u001b[39m \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mlocator(\u001b[32m\"//button[normalize-space()='Widgets']\"\u001b[39m)\u001b[33m.\u001b[39mclick()\u001b[33m;\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 370 |\u001b[39m \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mlocator(\u001b[32m\"//a[normalize-space()='Scroll Top']\"\u001b[39m)\u001b[33m.\u001b[39mclick()\u001b[33m;\u001b[39m\n \u001b[90m     |\u001b[39m                                                           \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 371 |\u001b[39m\n \u001b[90m 372 |\u001b[39m \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mevaluate(() \u001b[33m=>\u001b[39m {\n \u001b[90m 373 |\u001b[39m   window\u001b[33m.\u001b[39mscrollTo(\u001b[35m0\u001b[39m\u001b[33m,\u001b[39m \u001b[35m0\u001b[39m)\u001b[33m;\u001b[39m\u001b[0m"
+                    "message": "\u001b[31mTest timeout of 30000ms exceeded.\u001b[39m",
+                    "stack": "\u001b[31mTest timeout of 30000ms exceeded.\u001b[39m"
                   },
                   "errors": [
+                    {
+                      "message": "\u001b[31mTest timeout of 30000ms exceeded.\u001b[39m"
+                    },
                     {
                       "location": {
                         "file": "C:\\Users\\jagadeesh\\Desktop\\Self_Heal\\tests\\practise.spec.js",
                         "column": 59,
                         "line": 370
                       },
-                      "message": "Error: locator.click: Target page, context or browser has been closed\nCall log:\n\u001b[2m  - waiting for locator('//a[normalize-space()=\\'Scroll Top\\']')\u001b[22m\n\n\n\u001b[0m \u001b[90m 368 |\u001b[39m   )\u001b[33m;\u001b[39m\n \u001b[90m 369 |\u001b[39m \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mlocator(\u001b[32m\"//button[normalize-space()='Widgets']\"\u001b[39m)\u001b[33m.\u001b[39mclick()\u001b[33m;\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 370 |\u001b[39m \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mlocator(\u001b[32m\"//a[normalize-space()='Scroll Top']\"\u001b[39m)\u001b[33m.\u001b[39mclick()\u001b[33m;\u001b[39m\n \u001b[90m     |\u001b[39m                                                           \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 371 |\u001b[39m\n \u001b[90m 372 |\u001b[39m \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mevaluate(() \u001b[33m=>\u001b[39m {\n \u001b[90m 373 |\u001b[39m   window\u001b[33m.\u001b[39mscrollTo(\u001b[35m0\u001b[39m\u001b[33m,\u001b[39m \u001b[35m0\u001b[39m)\u001b[33m;\u001b[39m\u001b[0m\n\u001b[2m    at C:\\Users\\jagadeesh\\Desktop\\Self_Heal\\tests\\practise.spec.js:370:59\u001b[22m"
+                      "message": "Error: locator.click: Test timeout of 30000ms exceeded.\nCall log:\n\u001b[2m  - waiting for locator('//a[normalize-space()=\\'Scroll Top\\']')\u001b[22m\n\n\n\u001b[0m \u001b[90m 368 |\u001b[39m   )\u001b[33m;\u001b[39m\n \u001b[90m 369 |\u001b[39m \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mlocator(\u001b[32m\"//button[normalize-space()='Widgets']\"\u001b[39m)\u001b[33m.\u001b[39mclick()\u001b[33m;\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 370 |\u001b[39m \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mlocator(\u001b[32m\"//a[normalize-space()='Scroll Top']\"\u001b[39m)\u001b[33m.\u001b[39mclick()\u001b[33m;\u001b[39m\n \u001b[90m     |\u001b[39m                                                           \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 371 |\u001b[39m\n \u001b[90m 372 |\u001b[39m \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mevaluate(() \u001b[33m=>\u001b[39m {\n \u001b[90m 373 |\u001b[39m   window\u001b[33m.\u001b[39mscrollTo(\u001b[35m0\u001b[39m\u001b[33m,\u001b[39m \u001b[35m0\u001b[39m)\u001b[33m;\u001b[39m\u001b[0m\n\u001b[2m    at C:\\Users\\jagadeesh\\Desktop\\Self_Heal\\tests\\practise.spec.js:370:59\u001b[22m"
                     }
                   ],
                   "stdout": [],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2025-10-06T09:25:45.001Z",
+                  "startTime": "2025-10-06T10:06:30.698Z",
                   "annotations": [],
-                  "attachments": [],
-                  "errorLocation": {
-                    "file": "C:\\Users\\jagadeesh\\Desktop\\Self_Heal\\tests\\practise.spec.js",
-                    "column": 59,
-                    "line": 370
-                  }
+                  "attachments": [
+                    {
+                      "name": "error-context",
+                      "contentType": "text/markdown",
+                      "path": "C:\\Users\\jagadeesh\\Desktop\\Self_Heal\\test-results\\practise-Scrolling-Top-chromium\\error-context.md"
+                    }
+                  ]
                 }
               ],
               "status": "unexpected"
@@ -146,8 +144,8 @@
   ],
   "errors": [],
   "stats": {
-    "startTime": "2025-10-06T09:25:44.358Z",
-    "duration": 11068.296,
+    "startTime": "2025-10-06T10:06:27.718Z",
+    "duration": 34902.299,
     "expected": 0,
     "skipped": 0,
     "unexpected": 1,
